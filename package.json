@@ -8,20 +8,24 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tdusenbury/SVG-Logo-Generator.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/tdusenbury/SVG-Logo-Generator/issues"
   },
   "homepage": "https://github.com/tdusenbury/SVG-Logo-Generator#readme",
   "dependencies": {
     "inquirer": "8.0"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^24.9.0"
   }
+
 }

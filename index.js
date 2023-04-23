@@ -31,10 +31,10 @@ function init() {
     inquirer.prompt(questions)
         .then((answers) => {
             console.log(answers);
-            const shape = new Shapes(answers.text, answers.textColor, answers.shape, answers.shapeColor)
+            const shapes = new Shapes(answers.text, answers.textColor, answers.shape, answers.shapeColor)
 
-            fs.writeFile('./examples/log.svg', shape.render(), (err) =>
-                err ? console.log(err) : console.log("Your logo has been created."))
+            fs.writeFile('./examples/logo.svg', shapes.render(), (err) =>
+                err ? console.log(err) : console.log("Your logo.svg file has been created."))
         })
 }
 init()
