@@ -28,23 +28,18 @@ const questions = [
     },
 ]
 
-function writeFile(fileName, data) {
-    console.log('Your file is being created.')
-fs.writeFile(fileName, data, function (err) {
-
-})
+function writeToFile(fileName, responses) {
+    finishedShape = generateSVG(responses);
+    fs.writeFile(fileName, finishedShape, (err) =>
+    err ? console.log(err) : console.log ('Your image is being generated in the logo.svg file!')
+    );
 }
-
-
 
 function init() {
     inquirer.prompt(questions)
-        .then((answers) => {
-            console.log(answers);
-            const shapes = new Shapes(answers.text, answers.textColor, answers.shape, answers.shapeColor)
-
-            fs.writeFile('./examples/logo.svg', shapes.render(), (err) =>
-                err ? console.log(err) : console.log("Your logo.svg file has been created."))
+        .then((responses) => {
+            const fileName = 'examples/logo.svg';
+            writeToFile(fileName, responses)
         })
 }
 init()
