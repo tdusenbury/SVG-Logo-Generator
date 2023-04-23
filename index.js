@@ -18,7 +18,7 @@ const questions = [
     {
         type: 'list',
         name: 'shape',
-        message: 'Please explain how to install your application.',
+        message: 'Please choose a shape:',
         choices: ['Square','Triangle', 'Circle']
     },
     {
