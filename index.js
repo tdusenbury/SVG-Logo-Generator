@@ -1,19 +1,19 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const Shapes = require('./lib/shapes')
-
-
-
+const {generateSVG} = require('./lib/generateSVG');
 const questions = [
     {
         type: 'input',
         name: 'text',
-        message: 'Please enter up to 3 letters for your logo:'
+        message: 'Please enter up to 3 letters for your logo:',
+        validate: function(input) {
+            return input.length <= 3;
+        }    
     },
     {
         type: 'input',
         name: 'textColor',
-        message: 'Please enter the text color by color name or hexadecimal number:'
+        message: 'Please enter the text color by name or hexadecimal color number:'
     },
     {
         type: 'list',
@@ -24,9 +24,19 @@ const questions = [
     {
         type: 'input',
         name: 'shapeColor',
-        message: 'Please enter the shape color by color name or hexadecimal number:'
+        message: 'Please enter the shape color by name or hexadecimal color number:'
     },
 ]
+
+function writeFile(fileName, data) {
+    console.log('Your file is being created.')
+fs.writeFile(fileName, data, function (err) {
+
+})
+}
+
+
+
 function init() {
     inquirer.prompt(questions)
         .then((answers) => {

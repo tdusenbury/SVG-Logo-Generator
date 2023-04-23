@@ -1,0 +1,4 @@
+<svg width="300" height="200" version="1.1" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <polygon points = "100,50 50,150 150,150" fill="white" />
+        <text x="100" y="115" fill="Green" font-size="2em" text-anchor="middle" alignment-baseline="middle">TND</ text>
+        </svg>
