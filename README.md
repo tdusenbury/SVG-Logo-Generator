@@ -2,6 +2,24 @@
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
+## Description 
+
+Welcome to my .svg Logo Generator! 
+
+By entering 'node index.js' into the terminal command-line, you can create a basic logo that saves as a .svg file.
+
+This generator allows a developer to create a basic logo in the shape of a circle, square, or triangle. 
+The user can choose up to three letters for their logo as well as font and background colors. 
+If you know the hexadecimal color code, that can be entered also. 
+The logo is set to default as a 300 x 200 pixel image, but this can be adjusted as required.
+
+A developer could use this basic logo as a placeholder for project proposals or use it as a base and add additional shapes and allow more lettering. 
+
+Additionally, testing using jest is included showing the application does what it claims to do! 
+
+If you have found this generator outside of GitHub and wish to view the original, [visit my Repository link here.](https://github.com/tdusenbury/SVG-Logo-Generator)
+
+
 ## Technology Used 
 
 | [![My Skills](https://skillicons.dev/icons?i=js,nodejs,vscode,svg,github,jest&theme=light)](https://skillicons.dev) 
@@ -16,108 +34,49 @@
   - [**Author Info**](#author-info)
   - [**License**](#license)
 
-
-## Description 
-
-Welcome to my .svg Logo Generator! By entering 'node index.js' into the terminal command-line, you can create a basic logo that saves as a .svg file.
-
-This generator allows a developer to create a basic logo in the shape of a circle, square, or triangle. The user can choose up to three letters for their logo as well as font and background colors. If you know the hexadecimal color code, that can be entered also. The logo is set to default as a 300 x 200 pixel image, but this can be adjusted as required.
-
-A developer could use this basic logo as a placeholder for project proposals or use it as a base and add additional shapes and allow more lettering. 
-
-Additionally, testing using jest is included showing the application does what it claims to do! 
-
-If you have found this generator outside of github and wish to view the original, [visit my Repository link here.](https://github.com/tdusenbury/SVG-Logo-Generator)
-
-
 ## Installation
 
-The .svg Logo Generator requires npm Inquirer to render the logo. If you would like to run the tests, Jest is also needed.
+The .svg Logo Generator requires npm Inquirer. If you would like to run the included tests, or create your own, Jest is also needed.
 
-Both can be added by running `init i` in the terminal. This will install the correct version of the dependencies which are listed in the package.json file.
+Both can be added by running `init i` in the terminal command-line. This will install the correct version of the dependencies which are already listed for you in the package.json file.
+
+Additionally, an SVG extension can be added to view the logo within your code editor such as VS Code.
 
 
-```html
-<div class="header">
-        <h1>Hori<span class="seo">seo</span>n</h1>
-        <div>
-            <ul>
-                <li>
-                    <a href="#search-engine-optimization">Search Engine Optimization</a>
-                </li>
-                <li>
-                    <a href="#online-reputation-management">Online Reputation Management</a>
-                </li>
-                <li>
-                    <a href="#social-media-marketing">Social Media Marketing</a>
-                </li>
-            </ul>
-        </div>
-    </div>
+```package.json
+  "scripts": {
+    "test": "jest"
+  },
+  "homepage": "https://github.com/tdusenbury/SVG-Logo-Generator#readme",
+  "dependencies": {
+    "inquirer": "8.0"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": 
+    "jest": "^24.9.0"
 ```
-
-Converting the above non-semantic div with the class of 'header' to an appropriate [<header> semantic element](https://www.w3schools.com/html/html5_semantic_elements.asp). 
-
-```html
-<header>
-        <h1>Hori<span class="seo">seo</span>n</h1>
-        <nav>
-            <ul>
-                <li>
-                    <a href="#search-engine-optimization">Search Engine Optimization</a>
-                </li>
-                <li>
-                    <a href="#online-reputation-management">Online Reputation Management</a>
-                </li>
-                <li>
-                    <a href="#social-media-marketing">Social Media Marketing</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-
-```
-
-This change require some additional modification to the CSS selector: 
-
-```css
-.header {
-    padding: 20px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: #2a607c;
-    color: #ffffff;
-}
-```
-
-No longer targeting the element on the page with the class of 'header' but instead the css selector targeting the 'header' element 
-
-```css
-header {
-    padding: 20px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: #2a607c;
-    color: #ffffff;
-}
-
-```
-
 ## Usage 
 
-Provide instructions and examples for use. Include screenshots as needed. 
+Open the terminal in the root file of SVG-LOGO-GENERATOR. Enter 'node index.js' into the command-line. Questions will appear confirming the parameters of your logo which include the text (up to 3 letters), text color (written or hexadecimal). choice of shape (Circle, Square, or Triangle), and shape color.
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
+A successful generation will look like this in the terminal:
 
-```md
-![alt text](assets/images/screenshot.png)
-```
+![alt text](./images/Screenshot%20Terminal.PNG)
 
+And will generate a .svg file with this image:
+
+![alt text](./images/Generated%20Logo.PNG)
 
 ## Learning Points 
 
-I chose to define a class called 'Shapes' using the class constructor method. This method takes in four arguments that refer to the initials chosen, the color of the initials, the type of shape, and the color of the shape. Using these arguments I used `this` to create instance variables with the same name.
+I created a parent class of "Shape" and placed the common properties here. The classes of "Triangle", "Circle", and "Square" that are extended to "Shape" and use inheritance to reuse the code found there.
 
-The class then has a `render` method that takes in the arguments to create an instance of the 'Shapes' class 
+Each shape class includes the 'render()' method that returns a string for the SVG file with the shapes color.
 
+To ensure the generator is functioning properly, tests on each shape were created in the 'shapes.test.js' file. To run the tests, enter 'npm run test' in the command-line. If all tests pass, the terminal will display:
+
+![alt text](./images/Screenshot%20Terminal.PNG)
 
 
 ## Author Info

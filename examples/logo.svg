@@ -1,5 +1,6 @@
 <svg width="300" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg">
     
-        <circle cx="150" cy="100" r="80" fill="white" />
-        <text x="150" y="105" fill="green" font-size="2em" text-anchor="middle" alignment-baseline="middle">TND</text>
+        <rect x="20" y="20" width="150" height="150" fill="gray" />
+    
+        <text x="100" y="100" fill="#f08080" font-size="3em" text-anchor="middle" alignment-baseline="middle">TND</text>
         </svg>
