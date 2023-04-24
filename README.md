@@ -19,7 +19,7 @@ Additionally, testing using jest is included showing the application does what i
 
 If you have found this generator outside of GitHub and wish to view the original, [visit my Repository link here.](https://github.com/tdusenbury/SVG-Logo-Generator)
 
-
+[Please see the video of the .svg Logo Generator in action here!]()
 ## Technology Used 
 
 | [![My Skills](https://skillicons.dev/icons?i=js,nodejs,vscode,svg,github,jest&theme=light)](https://skillicons.dev) 
@@ -70,17 +70,39 @@ And will generate a .svg file with this image:
 
 ## Learning Points 
 
-I created a parent class of "Shape" and placed the common properties here. The classes of "Triangle", "Circle", and "Square" that are extended to "Shape" and use inheritance to reuse the code found there.
+I created a parent class of "Shape" and placed the common properties here. 
 
-Each shape class includes the 'render()' method that returns a string for the SVG file with the shapes color.
+The classes of "Triangle", "Circle", and "Square" that are extended to "Shape" and use inheritance to reuse the code found there.
+
+Each shape's class includes the 'render()' method that returns a string for the SVG file with the shapes color.
+
+These classes are utilized in conjunction with the responses generated using the Inquirer prompt syntax and then running through a generateSVG function.
+
+
+## Tests
 
 To ensure the generator is functioning properly, tests on each shape were created in the 'shapes.test.js' file. To run the tests, enter 'npm run test' in the command-line. If all tests pass, the terminal will display:
+
+```Jest
+
+const Circle = require('./Circle');
+
+describe('Circle', () => {
+  it('should render a circle shape in the correct color', () => {
+    let shapeColor = "blue";
+    let circle = new Circle(shapeColor);
+    let output = `<circle cx="150" cy="100" r="80" fill="${shapeColor}" />`
+    expect(circle.render()).toEqual(output);
+  })
+});
+```
 
 ![alt text](./images/Screenshot%20Terminal.PNG)
 
 
+
 ## Author Info
-My name is Tamara "T" Dusenbury.
+My name is Tamara "T" Dusenbury
 If you have any questions about me or this project, please contact me:
   
 - [**Github**](https://github.com/tdusenbury)
@@ -99,10 +121,6 @@ Shout outs to my whole cohort for great classes, but especially Laurie, Austin, 
 If you would like to contribute, please follow the [Contributor Covenant](https://www.contributor-covenant.org/).
 
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md)
-
-## Tests
-
-Go the extra mile and write tests for your application. Then provide examples on how to run them.
 
 ## License
 
