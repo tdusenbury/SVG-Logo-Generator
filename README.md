@@ -19,7 +19,7 @@ Additionally, testing using jest is included showing the application does what i
 
 If you have found this generator outside of GitHub and wish to view the original, [visit my Repository link here.](https://github.com/tdusenbury/SVG-Logo-Generator)
 
-[Please see the video of the .svg Logo Generator in action here!]()
+[Please see the video of the .svg Logo Generator in action here!](https://www.veed.io/view/d2fc7b79-a7d5-41d3-a2ac-05407e14f5ad?panel=share)
 ## Technology Used 
 
 | [![My Skills](https://skillicons.dev/icons?i=js,nodejs,vscode,svg,github,jest&theme=light)](https://skillicons.dev) 
@@ -38,7 +38,7 @@ If you have found this generator outside of GitHub and wish to view the original
 
 The .svg Logo Generator requires npm Inquirer. If you would like to run the included tests, or create your own, Jest is also needed.
 
-Both can be added by running `init i` in the terminal command-line. This will install the correct version of the dependencies which are already listed for you in the package.json file.
+Both can be added by running `init i` in the terminal command-line. This will install the correct version of the dependencies which are already listed for you in the package.json file. The information to look for in the package.json file are shown below.
 
 Additionally, an SVG extension can be added to view the logo within your code editor such as VS Code.
 
