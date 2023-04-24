@@ -83,7 +83,7 @@ These classes are utilized in conjunction with the responses generated using the
 
 To ensure the generator is functioning properly, tests on each shape were created in the 'shapes.test.js' file. To run the tests, enter 'npm run test' in the command-line. If all tests pass, the terminal will display:
 
-![alt text](./images/Screenshot%20Terminal.PNG)
+![alt text](./images/test.PNG)
 
 Here is an example of the testing code used:
 
