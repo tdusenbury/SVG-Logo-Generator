@@ -19,7 +19,7 @@ Additionally, testing using jest is included showing the application does what i
 
 If you have found this generator outside of GitHub and wish to view the original, [visit my Repository link here.](https://github.com/tdusenbury/SVG-Logo-Generator)
 
-[Please see the video of the .svg Logo Generator in action here!](https://www.veed.io/view/d2fc7b79-a7d5-41d3-a2ac-05407e14f5ad?panel=share)
+[Please see the video of the .svg Logo Generator in action here!](https://www.veed.io/view/406cec29-5601-4876-b8ae-c0cf076a6b27?panel=share)
 ## Technology Used 
 
 | [![My Skills](https://skillicons.dev/icons?i=js,nodejs,vscode,svg,github,jest&theme=light)](https://skillicons.dev) 
